@@ -1,67 +1,41 @@
-# 🌐 TAREA 2 – Consumo de API REST con Python
+# Tarea 2 – Consumo de API REST con Python
 
-## 🎯 Objetivo
+## Objetivo
 
-Desarrollar un script en Python que consuma una API REST pública, utilizando métodos `GET` y `POST`, con procesamiento de datos y manejo de errores. Esta tarea demuestra habilidades en integración de servicios externos, uso de librerías como `requests`, y buenas prácticas de manejo de solicitudes HTTP.
+El propósito de esta tarea es desarrollar un script en Python que realice el consumo de una API REST pública utilizando los métodos `GET` y `POST`. Se incluyen procesos de transformación de datos, simulación de envío de información y manejo adecuado de errores. Esta actividad demuestra competencias en integración con servicios externos y uso correcto de la librería `requests`.
 
----
+## API utilizada
 
-## 🔗 API utilizada
+Se empleó la API pública gratuita [JSONPlaceholder](https://jsonplaceholder.typicode.com), útil para pruebas de aplicaciones tipo REST.
 
-Se utilizó la API gratuita **JSONPlaceholder**, ideal para pruebas de aplicaciones RESTful:
+**Endpoints utilizados:**
 
-- **Base URL:** https://jsonplaceholder.typicode.com
-- **GET /posts:** devuelve una lista de publicaciones de prueba.
-- **POST /posts:** simula la creación de una nueva publicación (aunque no se guarda realmente en el servidor).
+- `GET /posts`: retorna una lista de publicaciones simuladas.
+- `POST /posts`: simula la creación de una publicación. Aunque la petición retorna un objeto con éxito, no se guarda en el servidor.
 
----
+## Enfoque implementado
 
-## 🧠 Enfoque implementado
-
-1. **GET request**  
-   Se realizó una solicitud `GET` al endpoint `/posts` para obtener publicaciones de ejemplo.  
-   Se procesó la respuesta JSON y se imprimieron los títulos de las primeras 5 publicaciones.
+1. **Solicitud GET**  
+   Se realizó una solicitud al endpoint `/posts` para obtener una lista de publicaciones. Se imprimieron los títulos de las primeras 5 entradas.
 
 2. **Procesamiento de datos**  
-   Los datos obtenidos fueron transformados a una lista de diccionarios en Python.  
-   Se extrajeron campos como `title` y se mostraron en consola.
+   La respuesta JSON fue transformada a una lista de diccionarios en Python. Se extrajeron campos como `title` y `body` para su impresión.
 
-3. **POST request**  
-   Se simuló el envío de un nuevo post usando el endpoint `/posts`, con datos como `title`, `body` y `userId`.  
-   La respuesta muestra un objeto con un `id` simulado por el servidor (`id: 101`).
+3. **Solicitud POST**  
+   Se simuló el envío de una nueva publicación, enviando campos como `title`, `body` y `userId`. La respuesta contenía un objeto con un `id` generado por el servidor.
 
-4. **Manejo de errores HTTP**  
-   Se usaron bloques `try-except` para capturar cualquier excepción derivada de problemas de red o errores de respuesta (`4xx` o `5xx`).
+4. **Manejo de errores**  
+   Se utilizaron bloques `try-except` para capturar excepciones de red o errores HTTP. Se validó el código de respuesta y se mostraron mensajes adecuados en caso de fallos.
 
----
+## Requisitos del entorno
 
-## 🧪 Ejecución
+- Python 3.7 o superior
+- Librería `requests` (se puede instalar con `pip install requests`)
 
-El script fue ejecutado en entorno local usando **Visual Studio Code** y Python 3.  
-También es compatible con Google Colab o cualquier entorno que soporte `requests`.
+## Ejecución
 
----
+1. Asegúrese de tener Python instalado.
+2. Instale la librería necesaria:
 
-## ✅ Archivos entregados
-
-- `tarea2_api.py`: Código fuente del script.
-- `README_Tarea2.md`: Documentación técnica.
-- Captura de consola con resultado de ejecución.
-
----
-
-## 🧩 Resultado
-
-La ejecución mostró:
-
-- ✅ 5 publicaciones extraídas exitosamente mediante `GET`.
-- ✅ Publicación simulada enviada correctamente mediante `POST`.
-- ✅ Manejo de errores activo y preparado para fallos de red o respuesta.
-
----
-
-## 📌 Conclusión
-
-Esta tarea demuestra la capacidad de consumir APIs REST de forma práctica usando Python.  
-Se incluyeron elementos clave como manejo de errores, interpretación de respuestas JSON, y simulación de operaciones típicas como lectura y escritura de datos.
-
+   ```bash
+   pip install requests
