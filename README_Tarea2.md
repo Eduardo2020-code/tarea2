@@ -2,11 +2,11 @@
 
 ## Objetivo
 
-El propósito de esta tarea es desarrollar un script en Python que realice el consumo de una API REST pública utilizando los métodos `GET` y `POST`. Se incluyen procesos de transformación de datos, simulación de envío de información y manejo adecuado de errores. Esta actividad demuestra competencias en integración con servicios externos y uso correcto de la librería `requests`.
+Se  desarrollo un script en Python realizando el consumo de una API REST pública utilizando los métodos `GET` y `POST`. Se incluyen procesos de transformación de datos, simulación de envío de información y manejo adecuado de errores. Esta actividad demuestra competencias en integración con servicios externos y uso correcto de la librería `requests`.
 
 ## API utilizada
 
-Se empleó la API pública gratuita [JSONPlaceholder](https://jsonplaceholder.typicode.com), útil para pruebas de aplicaciones tipo REST.
+Se  implemento la API pública gratuita [JSONPlaceholder](https://jsonplaceholder.typicode.com), útil para pruebas de aplicaciones tipo REST.
 
 **Endpoints utilizados:**
 
@@ -29,13 +29,16 @@ Se empleó la API pública gratuita [JSONPlaceholder](https://jsonplaceholder.ty
 
 ## Requisitos del entorno
 
-- Python 3.7 o superior
+- Python 3.7
 - Librería `requests` (se puede instalar con `pip install requests`)
 
 ## Ejecución
 
-1. Asegúrese de tener Python instalado.
-2. Instale la librería necesaria:
+1. Primero tener  Python instalado.
+2. Se debe intalar la libreria necesaria para ejecutar los comando requeridos:
 
-   ```bash
+   1.```bash
    pip install requests
+
+Comando para ejecutar el script y muestre resultados
+   2.python tarea2_api.py
