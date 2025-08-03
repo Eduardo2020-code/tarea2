@@ -32,13 +32,13 @@ Se  implemento la API pública gratuita [JSONPlaceholder](https://jsonplaceholde
 - Python 3.7
 - Librería `requests` (se puede instalar con `pip install requests`)
 
-## Ejecución
+## Comandos
 
 1. Primero tener  Python instalado.
 2. Se debe intalar la libreria necesaria para ejecutar los comando requeridos:
 
-   1.```bash
+   1. instalar la libreria para ejecutar el entorno de python:
    pip install requests
 
-Comando para ejecutar el script y muestre resultados
-   2.python tarea2_api.py
+   2. Comando para ejecutar el script y muestre resultados:
+   python tarea2_api.py
